@@ -9,19 +9,11 @@ const Layout = ({ children }) => {
     return (
         <div>
             {/** TODO: Add the Drawer here */}
-            <div>
-                {/** TODO: Add the Header here */}
+            <div className={classes.container}>
                 <Header />
                 <main className={classes.content}>
-                    <div>
-
-                    </div>
-                    <div style={{
-                        display: 'flex',
-                        flex: '1',
-                        positionL: 'relative',
-                        overflow: 'hidden',
-                    }}>
+                    <div className={classes.appBarSpacer} />
+                    <div className={classes.childrenContainer}>
                         { children }
                     </div>
                 </main>
