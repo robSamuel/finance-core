@@ -1,9 +1,13 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Layout from './components/Layout';
 
-function App() {
-  return (
-    <div className="App">
+const App = () => {
+  const demo = () => (
+    <div className="App" style={{ flex: '1' }}>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,6 +23,17 @@ function App() {
         </a>
       </header>
     </div>
+  );
+
+  return (
+    <React.Fragment>
+      <CssBaseline />
+        <BrowserRouter>
+        <Layout>
+          { demo() }
+        </Layout>
+        </BrowserRouter>
+    </React.Fragment>
   );
 }
 
