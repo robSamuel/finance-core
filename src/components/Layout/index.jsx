@@ -1,15 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useStyles } from './styles';
 import Header from '../Header';
 
 const Layout = ({ children }) => {
+    const classes = useStyles();
+
     return (
         <div>
             {/** TODO: Add the Drawer here */}
             <div>
                 {/** TODO: Add the Header here */}
                 <Header />
-                <main>
+                <main className={classes.content}>
                     <div>
 
                     </div>
